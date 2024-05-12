@@ -9,9 +9,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
+  height: 100vh; /* Ensure the background covers the full height of the viewport */
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
