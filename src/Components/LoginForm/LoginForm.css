@@ -1,11 +1,5 @@
 
-/* Media query for screens smaller than 620px */
-@media (max-width: 620px) {
-    .wrapper {
-      padding: 20px; /* Adjust padding for smaller screens */
-      width: 100%;
-    }
-  }
+
 .wrapper{
     justify-content: center;
     align-items: center;
@@ -23,8 +17,8 @@
 }
 
 .form-box {
-    width: 100%;
-    max-width: 400px; /* Set maximum width for the form-box */
+   
+    max-width: 100%; /* Set maximum width for the form-box */
     text-align: center;
   }
 
@@ -157,3 +151,13 @@
     cursor: pointer;
 }
 
+/* Media query for screens smaller than 620px */
+@media (max-width: 620px) {
+    .wrapper {
+      /* Adjust padding for smaller screens */
+      width: 100%;
+    }
+    .form-box{
+        width: 98%;
+    }
+  }
