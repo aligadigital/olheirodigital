@@ -3,6 +3,7 @@
 @media (max-width: 620px) {
     .wrapper {
       padding: 20px; /* Adjust padding for smaller screens */
+      width: 100%;
     }
   }
 .wrapper{
