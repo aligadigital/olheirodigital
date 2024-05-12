@@ -4,8 +4,8 @@ import logo from '../Assets/Olheiro_Digital_Logo_1.png'
 const  LoginForm = () => {
     return (
     <>
-    <div className='wrapper active'>
-    <div className='form-box login '>
+    <div className='wrapper'>
+    <div className='form-box'>
       <form onSubmit="">
       <img src={logo} className='header-login' alt='Olheiro Digital'/>
       
