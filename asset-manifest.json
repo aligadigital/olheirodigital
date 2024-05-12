@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/olheirodigital/static/css/main.5d406b55.css",
+    "main.js": "/olheirodigital/static/js/main.41306607.js",
+    "static/js/453.d8b1606b.chunk.js": "/olheirodigital/static/js/453.d8b1606b.chunk.js",
+    "static/media/Olheiro_Background.jpg": "/olheirodigital/static/media/Olheiro_Background.d56a6b78c705624cff37.jpg",
+    "static/media/logo.svg": "/olheirodigital/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/olheirodigital/index.html",
+    "main.5d406b55.css.map": "/olheirodigital/static/css/main.5d406b55.css.map",
+    "main.41306607.js.map": "/olheirodigital/static/js/main.41306607.js.map",
+    "453.d8b1606b.chunk.js.map": "/olheirodigital/static/js/453.d8b1606b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d406b55.css",
+    "static/js/main.41306607.js"
+  ]
+}
