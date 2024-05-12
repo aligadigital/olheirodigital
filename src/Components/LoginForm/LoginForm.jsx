@@ -21,7 +21,7 @@ const  LoginForm = () => {
         <div className="remember-forgot">
           <label>
             <input type='checkbox' id='remember-me' />
-           Lembre-se de mim
+           Lembre-se de mim!
           </label>
           <a href='./LoginForm.jsx'>Esqueci a senha</a>
         </div>
