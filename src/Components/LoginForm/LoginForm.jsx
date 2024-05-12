@@ -23,7 +23,7 @@ const  LoginForm = () => {
             <input type='checkbox' id='remember-me' />
            Lembre-se de mim
           </label>
-          <a href='#'>Esqueci a senha</a>
+          <a href='./LoginForm.jsx'>Esqueci a senha</a>
         </div>
           <button type='Submit'>ENTRAR</button>
       </form>
