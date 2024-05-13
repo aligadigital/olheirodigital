@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginForm from './Components/LoginForm/LoginForm';
+import PlayerRegister from './Components/Player/Register/Register'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 <BrowserRouter>
   <Routes>
     <Route path="/" element={<LoginForm />} />
+    <Route path='/player/register' element={<PlayerRegister/>}/>
   </Routes>
 </BrowserRouter>
 </div>
