@@ -1,0 +1,171 @@
+
+
+.wrapper-cadastro {
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, .2);
+    opacity: 3;
+    backdrop-filter: blur(960deg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: white;
+    border-radius: 10px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    position: absolute; /* Position absolute */
+    left: 10%; /* 10% from the left edge */
+}
+
+.title{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    padding-bottom: 10px;
+
+}
+.form-box-cadastro {
+    display: flex;
+    align-self: self-start;
+    width: 100%; /* Set maximum width for the form-box */
+}
+
+
+.input-box-register{
+    align-items: start;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    align-self: flex-start;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    top: 8px;
+    font-size: 11px;
+    position: relative;
+ }
+ 
+
+ .col2,
+ .col3 {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+     grid-gap: 10px;
+     width: 100%;
+     margin-bottom: 10px;
+ }
+
+
+
+.validation-enable{
+  background-color: transparent;
+  color: rgb(222, 84, 84);
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  visibility: visible;
+      
+}
+.validation-disable{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    visibility: hidden;
+        
+  }
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;;
+}
+
+.form-box-register .input-box{
+    position: relative;
+    width: 100%;
+    margin: 20px 0 ;
+}
+
+
+
+.place{
+    position: absolute;
+    top: 10px;
+    transition:  0.2s, font-size 0.2s, color 0.2s;
+    left: 15px;
+    font-size: 18px;
+    padding: 0px 5px;
+    color: #555555;
+}
+
+.input-box-register input:focus + .place,
+.input-box-register input:not(:focus):not(:placeholder-shown) + .place {
+    top: -1px;
+    font-size: 8px;
+    opacity: 1;
+    transition: top 0.2s, font-size 0.2s, color 0.2s;
+    /* Change color to match your design */
+    /* Adjust size to match your design */
+}
+.input-box-register input:not(:focus):placeholder-shown + .place {
+    top: 10px; /* Adjust as needed */
+    font-size: 18px; /* Adjust as needed */
+    opacity: 1;
+    transition: top 0.2s, font-size 0.2s, color 0.2s;
+    /* Change color to match your design */
+    /* Adjust size to match your design */
+}
+
+  .input-box-register input::placeholder {
+    color: transparent; /* Hide original placeholder text */
+  }
+
+
+
+.input-box-register input{
+    width: 100%;
+    height: 10px;
+    border: 2px solid rgba(255,255,255,.2) ;
+    outline: none;
+    border-radius: 40px;
+    font-size: 20px;
+    padding: 20px 40px 20px 20px;
+    
+}
+
+
+
+.span-logintitle{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #4F4F4F;
+}
+
+
+.wrapper-register button{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background: #4B0082;
+    box-shadow: 0 0 10px rgba(0,0,0,-1);
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Media query for screens smaller than 620px */
+@media (max-width: 620px) {
+    .wrapper-register {
+      /* Adjust padding for smaller screens */
+      width: 100%;
+    }
+    .form-box-register{
+        width: 98%;
+    }
+  }
