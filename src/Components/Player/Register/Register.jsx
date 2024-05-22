@@ -108,11 +108,10 @@ function PlayerRegister()  {
             </label>
           </div>
           <div className="input-box-register">
-          <div className="input-button">
-          <button type='submit'>CADASTRAR</button>
-          </div>
-      </div>
-        
+            <div className="input-button">
+              <button type='submit'>CADASTRAR</button>
+            </div>
+          </div>       
         </form>
       </div>
     </div>

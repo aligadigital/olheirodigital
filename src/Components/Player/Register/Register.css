@@ -72,6 +72,7 @@
   justify-content: center;
   align-items: center;
   padding-right: 10%;
+  overflow: scroll;
 }
 
 .input-button{
@@ -122,16 +123,19 @@
     top: -1px;
     font-size: 8px;
     opacity: 1;
+    overflow: scroll;
   }
   
   .input-box-register input:not(:focus):placeholder-shown + .place {
     top: 10px;
     font-size: 18px;
     opacity: 1;
+    overflow: scroll;
   }
   
   .input-box-register input::placeholder {
     color: transparent;
+    overflow: scroll;
   }
   
   .validation-enable {
@@ -179,6 +183,10 @@
     .input-box-register {
       margin-right: 0;
       margin-bottom: 10px;
+    }
+    .short-input {
+      flex: 0 0 10%;
+      width: 100%;
     }
   }
   
