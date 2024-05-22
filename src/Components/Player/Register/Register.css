@@ -82,12 +82,13 @@
 
 }
   
-button {
+.input-box-register button {
   width: 50%;
   align-items: center;
   outline: none;
   font-size: 20px;
-  border-color: white;
+  border-radius: 10px;
+  border-color: #fff;
   padding: 10px 20px; /* Add padding for better appearance */
   background-color: #ffffff; /* Optional: Set a background color */
   cursor: pointer; /* Change cursor to pointer on hover */
