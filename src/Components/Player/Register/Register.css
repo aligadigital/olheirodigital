@@ -55,15 +55,44 @@
     font-size: 20px;
     padding: 20px 40px 20px 20px;
   }
-  .input-box-register checkbox {
-    height: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+  .check-box input{
+    height: fit-content;
+    width: 50px;
+    border: 2px solid rgba(255,255,255,.2) ;
     outline: none;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
     border-radius: 40px;
-    font-size: 20px;
-    padding: 20px 40px 20px 20px;
+    font-size: 40px;
+
   }
+.input label{
+  justify-content: center;
+  align-items: center;
+  padding-right: 10%;
+}
+
+.input-button{
+   margin-top: 10px;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+
+}
   
+button {
+  width: 50%;
+  align-items: center;
+  outline: none;
+  font-size: 20px;
+  border-color: white;
+  padding: 10px 20px; /* Add padding for better appearance */
+  background-color: #ffffff; /* Optional: Set a background color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+
+}
   .short-input {
     flex: 0 0 10%;
     width: 20%;

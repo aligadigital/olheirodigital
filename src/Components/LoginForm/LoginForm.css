@@ -160,6 +160,7 @@
     cursor: pointer;
 }
 
+
 /* Media query for screens smaller than 620px */
 @media (max-width: 620px) {
     .wrapper {
