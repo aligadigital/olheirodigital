@@ -16,8 +16,7 @@ function LoginForm() {
     <div className='form-box'>
       <form onSubmit={handleSubmit}>
       <img src={logo} className='header-login' alt='Olheiro Digital'/>
-      
-       <div className='span-logintitle'>LOGIN</div>
+      <div className='span-logintitle'>LOGIN</div>
         <div className='input-box'>
           <input type='text' name='email' placeholder='Password'/>
           <label className='place'>email</label>
