@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 5px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -183,7 +183,7 @@ body {
   font-weight: 700;
   cursor: pointer;
 }
-
+/* Media query for screens between 620px and 1000px */
 @media (min-width: 620px) and (max-width: 1000px) {
   body {
     margin: 0;
@@ -197,13 +197,23 @@ body {
     justify-content: center;
     align-items: center;
   }
-
   .wrapper-cadastro {
-    width: 100%;
-    min-height: 110%; /* Ensure the height is 100% of the viewport */
-    padding: 20px;
-     margin-top: 20px;
-    margin-bottom: 20px; 
+    width: 90%;
+    margin-left: 2%;
+    margin: 3%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(960deg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 10px;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
   }
 
   .input-row {
@@ -215,41 +225,53 @@ body {
     margin-bottom: 10px;
   }
 
-  
   .wide-input {
     flex: 0 0 25%;
   }
-  
+
   .medium-input {
-    flex: 0 0 15%;
+    flex: 0 0 30%;
   }
+
   .short-input {
-    flex: 0 0 20%;
-    width: 25%;
+    flex: 0 0 25%;
+    width: 40%;
   }
-  
 }
+
 /* Media query for screens smaller than 620px */
 @media (max-width: 620px) {
   body {
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     background-image: url('/src/Components/Assets/Olheiro_Background.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 110vh;
+    height: 100%;
+    min-height: 140vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
+/* Added padding to prevent content from touching screen edges */
+  }
   .wrapper-cadastro {
-    width: 100%;
-    min-height: 110%; /* Ensure the height is 100% of the viewport */
-    padding: 20px;
-     margin-top: 20px;
-    margin-bottom: 20px; 
+ /* Full width for better fit on small screens */
+    margin: 1%;
+    width: 90%;
+    padding: 10px; /* Added padding to improve appearance */
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(960deg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
   }
 
   .input-row {
@@ -261,8 +283,16 @@ body {
     margin-bottom: 10px;
   }
 
+  .wide-input {
+    flex: 0 0 100%; /* Full width for better fit on small screens */
+  }
+
+  .medium-input {
+    flex: 0 0 100%; /* Full width for better fit on small screens */
+  }
+
   .short-input {
-    flex: 0 0 10%;
+    flex: 0 0 100%; /* Full width for better fit on small screens */
     width: 100%;
   }
 }
