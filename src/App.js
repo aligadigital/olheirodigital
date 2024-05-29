@@ -2,7 +2,8 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginForm from './Components/LoginForm/LoginForm';
-import PlayerRegister from './Components/Player/Register/Register'
+import Register from './Components/Player/Register/Register'
+import PlayerRegister from './Components/Player/Register/RegisterPlayer'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 <BrowserRouter>
   <Routes>
     <Route path="/" element={<LoginForm />} />
+    <Route path='/register' element={<Register/>}/>
     <Route path='/player/register' element={<PlayerRegister/>}/>
   </Routes>
 </BrowserRouter>

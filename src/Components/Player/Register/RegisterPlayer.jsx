@@ -3,8 +3,9 @@ import './Register.css';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import InputMask from 'react-input-mask';
+import  Basic from '../../Utils/DropZone'
 
-function Register()  {
+function PlayerRegister()  {
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
@@ -14,7 +15,7 @@ function Register()  {
     return (
     <>
     <div className="wrapper-cadastro">
-      <div className="title">CADASTRO</div>
+      <div className="title">CADASTRO ATLETA</div>
       <div className="form-box-cadastro">
         <form onSubmit={handleSubmit}>
           <div className="input-row">
@@ -23,6 +24,7 @@ function Register()  {
               <label className="place" htmlFor='name'>Nome</label>
             </div>
             <div className="input-box-register">
+
               <input type="text" name="sobrenome" placeholder="sobrenome" id="sobrenome" />
               <label className="place" htmlFor='sobrenome'>Sobrenome</label>
             </div>
@@ -33,8 +35,7 @@ function Register()  {
               <label className="place" htmlFor='email'>email</label>
             </div>
             <div className="input-box-register">
-              <input type="text" id="cpf" name="CPF" placeholder="CPF" />
-              <label className="place" htmlFor='cpf'>CPF</label>
+             <Basic/>
             </div>
 
           </div>
@@ -120,4 +121,4 @@ function Register()  {
     );
 }
 
-export default Register;
+export default PlayerRegister;

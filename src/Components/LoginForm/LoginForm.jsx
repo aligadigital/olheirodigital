@@ -8,7 +8,7 @@ function LoginForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate('/player/register');
+    navigate('/register');
   };
     return (
     <>
