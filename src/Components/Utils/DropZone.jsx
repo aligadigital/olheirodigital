@@ -1,27 +1,96 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDropzone} from 'react-dropzone';
+import './DropZone.css';
 
-function Basic(props) {
-  const {acceptedFiles, getRootProps, getInputProps} = useDropzone();
+
+
+
+const thumbsContainer = {
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+
+};
+
+const thumb = {
+  display: 'inline-flex',
+  borderRadius: 200,
+  background: '#ffffff',
+  // border: '1px dashed #eaeaea',
+  width: 200,
+  height: 200,
+
+  // boxSizing: 'border-box',
+
+};
+
+
+
+const thumbInner = {
+  display: 'flex',
+  minWidth: 0,
+  overflow: 'hidden',
+  width: '200px',
+  height: '200px',
+  borderRadius: '200',
+
+
+};
+
+const img = {
+  display: 'block',
+  width: '200px',
+  height: '200px',
+  overflow: 'hidden',
+  borderRadius: '200px',
+
+};
+
+
+
+
+function Previews(props) {
+  const [files, setFiles] = useState([]);
+  const {getRootProps, getInputProps} = useDropzone({
+    accept: {
+      'image/*': []
+    },
+    onDrop: acceptedFiles => {
+      setFiles(acceptedFiles.map(file => Object.assign(file, {
+        preview: URL.createObjectURL(file)
+      })));
+    }
+  });
   
-  const files = acceptedFiles.map(file => (
-    <li key={file.path}>
-      {file.path} - {file.size} bytes
-    </li>
+  const thumbs = files.map(file => (
+    <div style={thumb} key={file.name}>
+      <div style={thumbInner}>
+        <img
+          src={file.preview}
+          style={img}
+         
+          onLoad={() => { URL.revokeObjectURL(file.preview) }}
+        />
+      </div>
+    </div>
   ));
 
+  useEffect(() => {
+    // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
+    return () => files.forEach(file => URL.revokeObjectURL(file.preview));
+  }, []);
+
   return (
-    <section className="container">
+    <div className="container" style={{ backgroundColor: files.length > 0 ? 'transparent' : 'white' }}>
+
       <div {...getRootProps({className: 'dropzone'})}>
         <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
+        {files.length === 0 && <p>Foto</p>}
       </div>
-      <aside>
-        <h4>Files</h4>
-        <ul>{files}</ul>
+      <aside style={thumbsContainer}>
+        {thumbs}
       </aside>
-    </section>
+    </div>
   );
 }
-
-export default Basic;
+export default Previews

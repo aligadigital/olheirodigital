@@ -3,7 +3,8 @@ import './Register.css';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import InputMask from 'react-input-mask';
-import  Basic from '../../Utils/DropZone'
+import  Previews from '../../Utils/DropZone'
+import Bonecao from '../../../WebComponent/GrupoComponent'
 
 function PlayerRegister()  {
     const navigate = useNavigate();
@@ -14,34 +15,31 @@ function PlayerRegister()  {
     };
     return (
     <>
+    <a href='../../LoginForm/LoginForm.jsx'>
+    <Bonecao></Bonecao></a>
     <div className="wrapper-cadastro">
       <div className="title">CADASTRO ATLETA</div>
       <div className="form-box-cadastro">
         <form onSubmit={handleSubmit}>
-          <div className="input-row">
+          
+        <div className="input-2-col">
+          <div className="preview-column">
+            <Previews/>
+          </div>
+          <div className="input-column">
             <div className="input-box-register">
               <input type="text" id="name" name="nome" placeholder="nome" />
               <label className="place" htmlFor='name'>Nome</label>
             </div>
             <div className="input-box-register">
-
-              <input type="text" name="sobrenome" placeholder="sobrenome" id="sobrenome" />
-              <label className="place" htmlFor='sobrenome'>Sobrenome</label>
-            </div>
-          </div>
-          <div className="input-row">
-            <div className="input-box-register">
-              <input type="text" name="email" placeholder="email" id="email"/>
-              <label className="place" htmlFor='email'>email</label>
+              <input type="text" id="sobrenome" name="sobrenome" placeholder="nome" />
+              <label className="place" htmlFor='sobrenome'>SobreNome</label>
             </div>
             <div className="input-box-register">
-             <Basic/>
+              <input type="text" id="apelido" name="apelido" placeholder="nome" />
+              <label className="place" htmlFor='apelido'>Apelido</label>
             </div>
-
-          </div>
-          <div className="input-row">
-          <div className="input-box-register medium-input">
-
+            <div className="input-box-register data-input">
              <InputMask
                 mask="99/99/9999"
                 placeholder="Data Nascimento"
@@ -53,6 +51,18 @@ function PlayerRegister()  {
               </InputMask>
               <label className="place" htmlFor='dtnasc'>Data Nascimento</label>
             </div>
+          </div>
+        </div>
+        
+          
+          <div className="input-row">
+            <div className="input-box-register">
+              <input type="text" name="email" placeholder="email" id="email"/>
+              <label className="place" htmlFor='email'>email</label>
+            </div>
+          </div>
+          <div className="input-row">
+          
             </div>
           <div className="input-row">
             <div className="input-box-register">

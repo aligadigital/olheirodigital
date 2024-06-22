@@ -28,6 +28,8 @@
 
     "react-input-mask": "^2.0.4",
 
+    "react-native-svg": "^15.3.0",
+
     "react-router": "^6.23.0",
 
     "react-router-dom": "^6.23.1",

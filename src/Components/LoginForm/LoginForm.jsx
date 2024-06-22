@@ -2,6 +2,7 @@ import './LoginForm.css';
 import logo from '../Assets/Olheiro_Digital_Logo_1.png'
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+//import  Webs from '../../WebComponent/WebComponent'
 
 function LoginForm() {
   const navigate = useNavigate();
@@ -10,8 +11,9 @@ function LoginForm() {
     event.preventDefault();
     navigate('/register');
   };
-    return (
+  return (
     <>
+   {/* <Webs/> */}
     <div className='wrapper'>
     <div className='form-box'>
       <form onSubmit={handleSubmit}>

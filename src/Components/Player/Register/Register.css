@@ -46,6 +46,29 @@ body {
   width: 100%;
 }
 
+.input-2-col {
+  display: flex;
+  /* justify-content: space-between;
+  align-items: flex-start; Align items at the top */
+  /* width: 100%; */
+  /* margin-bottom: 2%;
+  margin-top: 2%; */
+
+}
+
+.preview-column {
+  width: 30%; /* Adjust width as needed */
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+ 
+}
+
+.input-column {
+  width: 70%; /* Adjust width as needed */
+}
+
 .input-row {
   display: flex;
   justify-content: space-between;
@@ -57,7 +80,8 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-right: 10px;
+  margin-right: 2%;
+  padding-bottom: 2%;
   position: relative;
 }
 
@@ -120,10 +144,17 @@ body {
 .wide-input {
   flex: 0 0 45%;
 }
+.data-input {
+  flex: 0 0 25%;
+  width: 25%;
+}
+
 
 .medium-input {
   flex: 0 0 25%;
+  width: 50%;
 }
+
 
 .place {
   position: absolute;
@@ -197,6 +228,7 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   .wrapper-cadastro {
     width: 90%;
     margin-left: 2%;
@@ -231,8 +263,12 @@ body {
 
   .medium-input {
     flex: 0 0 30%;
+    width: 70%;
   }
-
+  .data-input {
+    flex: 0 0 85%;
+    width: 85%;
+  }
   .short-input {
     flex: 0 0 25%;
     width: 40%;
@@ -290,7 +326,10 @@ body {
   .medium-input {
     flex: 0 0 100%; /* Full width for better fit on small screens */
   }
-
+  .data-input {
+    flex: 0 0 100%;
+    width: 100%;
+  }
   .short-input {
     flex: 0 0 100%; /* Full width for better fit on small screens */
     width: 100%;
