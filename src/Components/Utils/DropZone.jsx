@@ -68,7 +68,7 @@ function Previews(props) {
         <img
           src={file.preview}
           style={img}
-         
+          alt="Atleta"
           onLoad={() => { URL.revokeObjectURL(file.preview) }}
         />
       </div>
@@ -78,7 +78,7 @@ function Previews(props) {
   useEffect(() => {
     // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
     return () => files.forEach(file => URL.revokeObjectURL(file.preview));
-  }, []);
+  }, [files]); // Add 'files' to the dependency array
 
   return (
     <div className="container" style={{ backgroundColor: files.length > 0 ? 'transparent' : 'white' }}>
