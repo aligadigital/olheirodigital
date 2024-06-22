@@ -11,25 +11,14 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-/* Media query for screens smaller than 620px */
 @media (max-width: 620px) {
   body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    background-color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image:'./Components/Assets/Olheiro_Background.jpg';
-    background-position: center center;
-    /* background-size: 100% auto; */
-    background-repeat: no-repeat;
-    /* min-height: 100vh; */
+    background-image: url('./Components/Assets/Olheiro_Background.jpg');
   }
 }
