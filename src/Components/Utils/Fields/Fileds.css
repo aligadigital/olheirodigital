@@ -1,0 +1,230 @@
+
+
+  .input-box-register {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 2%;
+    padding-bottom: 2%;
+    position: relative;
+  }
+  
+  .input-box-register:last-child {
+    margin-right: 0;
+  }
+  
+  .input-box-register input {
+    height: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-radius: 40px;
+    font-size: 20px;
+    padding: 20px 40px 20px 20px;
+  }
+  
+  .check-box input {
+    height: fit-content;
+    width: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    font-size: 40px;
+  }
+  
+  .input label {
+    justify-content: center;
+    align-items: center;
+    padding-right: 10%;
+  }
+  
+  .input-button {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input-box-register button {
+    width: 50%;
+    align-items: center;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    border-color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .short-input {
+    flex: 0 0 10%;
+    width: 20%;
+  }
+  
+  .wide-input {
+    flex: 0 0 45%;
+  }
+  .data-input {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  
+  
+  .medium-input {
+    flex: 0 0 0%;
+    width: 48%;
+  }
+  
+  
+  .place {
+    position: absolute;
+    top: 10px;
+    transition: top 0.2s, font-size 0.2s, color 0.2s;
+    left: 15px;
+    font-size: 18px;
+    padding: 0 5px;
+    color: #555555;
+  }
+  
+  .input-box-register input:focus + .place,
+  .input-box-register input:not(:focus):not(:placeholder-shown) + .place {
+    top: -1px;
+    font-size: 8px;
+    opacity: 1;
+  }
+  
+  .input-box-register input:not(:focus):placeholder-shown + .place {
+    top: 10px;
+    font-size: 18px;
+    opacity: 1;
+  }
+  
+  .input-box-register input::placeholder {
+    color: transparent;
+  }
+  
+  .validation-enable {
+    background-color: transparent;
+    color: rgb(222, 84, 84);
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    visibility: visible;
+  }
+  
+  .validation-disable {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    visibility: hidden;
+  }
+  
+  .wrapper-register button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background: #4b0082;
+    box-shadow: 0 0 10px rgba(0, 0, 0, -1);
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  /* Media query for screens between 620px and 1000px */
+  @media (min-width: 620px) and (max-width: 1000px) {
+  
+    .input-box-register {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .wide-input {
+      flex: 0 0 25%;
+    }
+  
+    .medium-input {
+      flex: 0 0 30%;
+      width: 70%;
+    }
+    .data-input {
+      flex: 0 0 85%;
+      width: 85%;
+    }
+    .short-input {
+      flex: 0 0 25%;
+      width: 40%;
+    }
+  }
+  
+  /* Media query for screens smaller than 620px */
+  @media (max-width: 620px) {
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      background-image: url('/src/Components/Assets/Olheiro_Background.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      min-height: 140vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+  /* Added padding to prevent content from touching screen edges */
+    }
+
+
+  
+    .input-box-register {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .wide-input {
+      flex: 0 0 100%; /* Full width for better fit on small screens */
+    }
+  
+    .medium-input {
+      flex: 0 0 100%; /* Full width for better fit on small screens */
+    }
+    .data-input {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+    .short-input {
+      flex: 0 0 100%; /* Full width for better fit on small screens */
+      width: 100%;
+    }
+    .input-2-col {
+        display: flex;
+        flex-direction: row;
+      }
+      
+    .preview-column {
+        width: 30%; /* Adjust width as needed */
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+      
+      .input-column {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .input-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+  }
+  

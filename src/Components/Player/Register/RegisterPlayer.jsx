@@ -2,9 +2,9 @@ import './Register.css';
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import InputMask from 'react-input-mask';
-import  Previews from '../../Utils/DropZone'
-import Bonecao from '../../../WebComponent/GrupoComponent'
+
+import  DropzoneComponent from '../../Utils/DropZone'
+import Fields from '../../Utils/Fields/Fileds'
 
 function PlayerRegister()  {
     const navigate = useNavigate();
@@ -16,7 +16,7 @@ function PlayerRegister()  {
     return (
     <>
     <a href='../../LoginForm/LoginForm.jsx'>
-    <Bonecao></Bonecao></a>
+    </a>
     <div className="wrapper-cadastro">
       <div className="title">CADASTRO ATLETA</div>
       <div className="form-box-cadastro">
@@ -24,38 +24,20 @@ function PlayerRegister()  {
           
         <div className="input-2-col">
           <div className="preview-column">
-            <Previews/>
+            <DropzoneComponent/>
           </div>
           <div className="input-column">
-            <div className="input-box-register">
-              <input type="text" id="name" name="nome" placeholder="nome" />
-              <label className="place" htmlFor='name'>Nome</label>
-            </div>
-            <div className="input-box-register">
-              <input type="text" id="sobrenome" name="sobrenome" placeholder="nome" />
-              <label className="place" htmlFor='sobrenome'>SobreNome</label>
-            </div>
-            <div className="input-box-register">
-              <input type="text" id="apelido" name="apelido" placeholder="nome" />
-              <label className="place" htmlFor='apelido'>Apelido</label>
-            </div>
-            <div className="input-box-register data-input">
-             <InputMask
-                mask="99/99/9999"
-                placeholder="Data Nascimento"
-                name="DtNasc"
-                id='dtnasc'
-                maskChar={null}
-              >
-                {(inputProps) => <input {...inputProps} type="text" />}
-              </InputMask>
-              <label className="place" htmlFor='dtnasc'>Data Nascimento</label>
+            <Fields name='name' text='Nome'></Fields>
+            <Fields name='sobrenome' text='SobreNome'></Fields>
+            <Fields name='apelido' text='Apelido'></Fields>
+            <div className="input-row">
+              <Fields name='genero' text='Genero' size='medium'></Fields>
+              <Fields name='DtNasc' text='Data Nascimento' size='medium'></Fields>
             </div>
           </div>
         </div>
-        
-          
-          <div className="input-row">
+      
+        <div className="input-row">
             <div className="input-box-register">
               <input type="text" name="email" placeholder="email" id="email"/>
               <label className="place" htmlFor='email'>email</label>

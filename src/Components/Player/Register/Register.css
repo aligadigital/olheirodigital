@@ -48,74 +48,35 @@ body {
 
 .input-2-col {
   display: flex;
-  /* justify-content: space-between;
-  align-items: flex-start; Align items at the top */
-  /* width: 100%; */
-  /* margin-bottom: 2%;
-  margin-top: 2%; */
+  flex-direction: row;
+  box-sizing: border-box;
+  position: "relative",
 
 }
 
 .preview-column {
-  width: 30%; /* Adjust width as needed */
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-top: 2%;
+  width: 30%;
+  padding-right: 1%;
+  padding-left: 2%;
   padding-bottom: 2%;
+
  
 }
 
 .input-column {
-  width: 70%; /* Adjust width as needed */
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .input-row {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin-bottom: 10px;
+  width: 98%;
+  
 }
 
-.input-box-register {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin-right: 2%;
-  padding-bottom: 2%;
-  position: relative;
-}
-
-.input-box-register:last-child {
-  margin-right: 0;
-}
-
-.input-box-register input {
-  height: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  outline: none;
-  border-radius: 40px;
-  font-size: 20px;
-  padding: 20px 40px 20px 20px;
-}
-
-.check-box input {
-  height: fit-content;
-  width: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  outline: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40px;
-  font-size: 40px;
-}
-
-.input label {
-  justify-content: center;
-  align-items: center;
-  padding-right: 10%;
-}
 
 .input-button {
   margin-top: 10px;
@@ -136,52 +97,9 @@ body {
   cursor: pointer;
 }
 
-.short-input {
-  flex: 0 0 10%;
-  width: 20%;
-}
-
-.wide-input {
-  flex: 0 0 45%;
-}
-.data-input {
-  flex: 0 0 25%;
-  width: 25%;
-}
 
 
-.medium-input {
-  flex: 0 0 25%;
-  width: 50%;
-}
 
-
-.place {
-  position: absolute;
-  top: 10px;
-  transition: top 0.2s, font-size 0.2s, color 0.2s;
-  left: 15px;
-  font-size: 18px;
-  padding: 0 5px;
-  color: #555555;
-}
-
-.input-box-register input:focus + .place,
-.input-box-register input:not(:focus):not(:placeholder-shown) + .place {
-  top: -1px;
-  font-size: 8px;
-  opacity: 1;
-}
-
-.input-box-register input:not(:focus):placeholder-shown + .place {
-  top: 10px;
-  font-size: 18px;
-  opacity: 1;
-}
-
-.input-box-register input::placeholder {
-  color: transparent;
-}
 
 .validation-enable {
   background-color: transparent;
@@ -252,27 +170,7 @@ body {
     flex-direction: column;
   }
 
-  .input-box-register {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .wide-input {
-    flex: 0 0 25%;
-  }
-
-  .medium-input {
-    flex: 0 0 30%;
-    width: 70%;
-  }
-  .data-input {
-    flex: 0 0 85%;
-    width: 85%;
-  }
-  .short-input {
-    flex: 0 0 25%;
-    width: 40%;
-  }
+  
 }
 
 /* Media query for screens smaller than 620px */
@@ -314,24 +212,5 @@ body {
     flex-direction: column;
   }
 
-  .input-box-register {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .wide-input {
-    flex: 0 0 100%; /* Full width for better fit on small screens */
-  }
-
-  .medium-input {
-    flex: 0 0 100%; /* Full width for better fit on small screens */
-  }
-  .data-input {
-    flex: 0 0 100%;
-    width: 100%;
-  }
-  .short-input {
-    flex: 0 0 100%; /* Full width for better fit on small screens */
-    width: 100%;
-  }
+  
 }
